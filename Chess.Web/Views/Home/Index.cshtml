@@ -7,9 +7,15 @@
 
 <div ng-controller="ChessController">
     <table>
+        <tr ng-repeat="row in chessboardManager.chessboard">
+            <td ng-repeat="piece in row track by $index">
+                {{ piece }}
+            </td>
+        </tr>
     </table>
-    {{ 2 + 2 }}
     <h4>{{ status }}</h4>
 </div>
 
+<script src="~/App/Chess/Model/Piece.js"></script>
+<script src="~/App/Chess/Model/ChessboardManager.js"></script>
 <script src="~/App/Chess/ChessController.js"></script>
