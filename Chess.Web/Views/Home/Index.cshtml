@@ -3,13 +3,18 @@
     ViewBag.Title = "TppChess";
 }
 
-<h2>TppChess</h2>
-
 <div ng-controller="ChessController">
-    <table>
-        <tr ng-repeat="row in chessboardManager.chessboard">
+    <table id="chessboard">
+        <tr ng-repeat="(key, row) in chessboardManager.chessboard">
+            <td>{{ chessboardManager.rows[chessboardManager.chessboardSize - 1 - key] }}</td>
             <td ng-repeat="piece in row track by $index">
-                {{ piece }}
+                {{ piece.toString() }}
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td ng-repeat="columnName in chessboardManager.columns">
+                {{ columnName }}
             </td>
         </tr>
     </table>

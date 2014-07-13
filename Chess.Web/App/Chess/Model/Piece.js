@@ -1,11 +1,36 @@
-﻿var Piece;
-(function (Piece) {
-    Piece[Piece["Empty"] = 0] = "Empty";
-    Piece[Piece["Pawn"] = 1] = "Pawn";
-    Piece[Piece["Knight"] = 2] = "Knight";
-    Piece[Piece["Bishop"] = 3] = "Bishop";
-    Piece[Piece["Rook"] = 4] = "Rook";
-    Piece[Piece["Queen"] = 5] = "Queen";
-    Piece[Piece["King"] = 6] = "King";
-})(Piece || (Piece = {}));
+﻿var Piece = (function () {
+    function Piece(type) {
+        this.type = type;
+    }
+    Piece.prototype.toString = function () {
+        var result;
+
+        switch (this.type) {
+            case 3 /* Bishop */:
+                result = "B";
+                break;
+            case 0 /* Empty */:
+                result = "";
+                break;
+            case 6 /* King */:
+                result = "K";
+                break;
+            case 2 /* Knight */:
+                result = "N";
+                break;
+            case 1 /* Pawn */:
+                result = "P";
+                break;
+            case 5 /* Queen */:
+                result = "Q";
+                break;
+            case 4 /* Rook */:
+                result = "R";
+                break;
+        }
+
+        return result;
+    };
+    return Piece;
+})();
 //# sourceMappingURL=Piece.js.map
