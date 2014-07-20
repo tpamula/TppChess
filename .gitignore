@@ -65,3 +65,4 @@ UCosmic.Www.Mvc.Publish.xml
 #Ignore private folder
 /Private/
 Chess.Web\Properties\PublishProfiles*/
+Chess.Web/Properties/PublishProfiles/tppchess.pubxml
