@@ -25,15 +25,15 @@ namespace Chess.Core.Model
         {
             get
             {
-                return rowInternalRepresentation[columnToListIndex(column)];
+                return rowInternalRepresentation[ConvertColumnToListIndex(column)];
             }
             private set
             {
-                rowInternalRepresentation[columnToListIndex(column)] = value;
+                rowInternalRepresentation[ConvertColumnToListIndex(column)] = value;
             }
         }
 
-        private int columnToListIndex(char column)
+        private int ConvertColumnToListIndex(char column)
         {
             return Convert.ToInt32(column) - Convert.ToInt32('a');
         }

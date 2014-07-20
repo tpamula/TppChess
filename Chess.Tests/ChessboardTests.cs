@@ -13,7 +13,7 @@ namespace Chess.Tests
         {
             var chessboard = new Chessboard();
 
-            foreach (int row in new List<int>() { 1, 8 })
+            foreach (int row in new[] { 1, 8 })
             {
                 Assert.True(chessboard['a', row] == PieceType.Rook);
                 Assert.True(chessboard['b', row] == PieceType.Knight);
@@ -25,7 +25,7 @@ namespace Chess.Tests
                 Assert.True(chessboard['h', row] == PieceType.Rook);
             }
 
-            foreach (int row in new List<int>() { 2, 7 })
+            foreach (int row in new[] { 2, 7 })
             {
                 for (int i = 0; i < 8; i++)
                 {
