@@ -1,7 +1,5 @@
 ﻿using Chess.Core.Enums;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Chess.Core.Model
 {
@@ -9,10 +7,10 @@ namespace Chess.Core.Model
     {
         public Chessboard()
         {
-            createInitialSetup();
+            CreateInitialSetup();
         }
 
-        private void createInitialSetup()
+        private void CreateInitialSetup()
         {
             var initialSetup = new List<Row>();
 
