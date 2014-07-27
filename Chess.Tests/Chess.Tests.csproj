@@ -45,8 +45,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChessboardTests.cs" />
+    <Compile Include="Model\ChessboardTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\PieceLegalMovesTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
