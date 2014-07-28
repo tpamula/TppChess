@@ -10,7 +10,7 @@ namespace Chess.Core.Services
 {
     public static class PieceLegalMoves
     {
-        public static HashSet<Coordinates> GetLegalMoves(Coordinates coordinates, Chessboard chessboard)
+        public static HashSet<Position> GetLegalMoves(Position position, Chessboard chessboard)
         {
             throw new NotImplementedException();
         }

@@ -43,7 +43,7 @@
     <Compile Include="Model\Chessboard.cs" />
     <Compile Include="Enums\PieceType.cs" />
     <Compile Include="Exceptions\IllegalMoveException.cs" />
-    <Compile Include="Model\Coordinates.cs" />
+    <Compile Include="Model\Position.cs" />
     <Compile Include="Model\Piece.cs" />
     <Compile Include="Model\Row.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

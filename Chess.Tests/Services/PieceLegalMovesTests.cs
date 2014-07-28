@@ -16,13 +16,13 @@ namespace Chess.Tests.Services
         public void should_return_legal_moves_for_a2_pawn_on_chessboard_with_initial_setup()
         {
             var chessboard = new Chessboard();
-            var legalMoves = new HashSet<Coordinates>()
+            var legalMoves = new HashSet<Position>()
             {
-                "a3".ToCoordinates(),
-                "a4".ToCoordinates()
+                "a3".ToPosition(),
+                "a4".ToPosition()
             };
 
-            Assert.True(PieceLegalMoves.GetLegalMoves("a2".ToCoordinates(), chessboard)
+            Assert.True(PieceLegalMoves.GetLegalMoves("a2".ToPosition(), chessboard)
                                        .SetEquals(legalMoves));
         }
     }

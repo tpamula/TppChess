@@ -30,7 +30,7 @@ namespace Chess.Core.Model
             get { return this[position[0], int.Parse(position[1].ToString(CultureInfo.InvariantCulture))]; }
         }
 
-        public void MovePiece(Coordinates source, Coordinates target)
+        public void MovePiece(Position source, Position target)
         {
             if (!IsMoveLegal(source, target)) throw new IllegalMoveException();
         }
@@ -122,7 +122,7 @@ namespace Chess.Core.Model
             _chessboardInternalRepresentation = initialSetup.AsReadOnly();
         }
 
-        private bool IsMoveLegal(Coordinates source, Coordinates target)
+        private bool IsMoveLegal(Position source, Position target)
         {
             throw new NotImplementedException();
         }
