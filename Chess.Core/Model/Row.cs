@@ -7,30 +7,47 @@ namespace Chess.Core.Model
 {
     public class Row
     {
-        private List<PieceType> rowInternalRepresentation;
+        private readonly List<Piece> _rowInternalRepresentation;
 
-        public Row(ICollection<PieceType> pieces)
+        public Row(ICollection<Piece> pieces)
         {
             if (pieces.Count != 8) throw new ArgumentException();
 
-            rowInternalRepresentation = pieces.ToList();
+            _rowInternalRepresentation = pieces.ToList();
         }
 
-        public IReadOnlyList<PieceType> Representation
+        public IReadOnlyList<Piece> Representation
         {
-            get { return rowInternalRepresentation.AsReadOnly(); }
+            get { return _rowInternalRepresentation.AsReadOnly(); }
         }
 
-        public PieceType this[char column]
+        public Piece this[char column]
         {
             get
             {
-                return rowInternalRepresentation[ConvertColumnToListIndex(column)];
+                return _rowInternalRepresentation[ConvertColumnToListIndex(column)];
             }
             private set
             {
-                rowInternalRepresentation[ConvertColumnToListIndex(column)] = value;
+                _rowInternalRepresentation[ConvertColumnToListIndex(column)] = value;
             }
+        }
+
+        public override string ToString()
+        {
+            string result = string.Empty;
+
+            for (int i = 0; i < 8; i++)
+            {
+                result += _rowInternalRepresentation[i].ToString();
+
+                if (i != 7)
+                {
+                    result += " ";
+                }
+            }
+
+            return result;
         }
 
         private int ConvertColumnToListIndex(char column)

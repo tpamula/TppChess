@@ -8,13 +8,13 @@ namespace Chess.Core.Model
 {
     public struct Coordinates
     {
-        private char _column;
-        private int _row;
+        public readonly char Column;
+        public readonly int Row;
 
         public Coordinates(char column, int row)
         {
-            _row = row;
-            _column = column;
+            Row = row;
+            Column = column;
         }
     }
 
