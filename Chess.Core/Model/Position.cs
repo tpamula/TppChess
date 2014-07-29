@@ -22,7 +22,10 @@ namespace Chess.Core.Model
     {
         public static Position ToPosition(this string value)
         {
-            return new Position(value[0], Convert.ToInt32(value[1]));
+            return new Position(
+                    value[0],
+                    Convert.ToInt32(char.GetNumericValue(value[1]))
+                );
         }
     }
 }

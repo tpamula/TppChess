@@ -25,5 +25,17 @@ namespace Chess.Tests.Services
             Assert.True(PieceLegalMovesService.GetLegalMoves("a2".ToPosition(), chessboard)
                                        .SetEquals(legalMoves));
         }
+
+        [Fact]
+        public void should_return_legal_moves_when_capture_available()
+        {
+            throw new NotImplementedException();
+        }
+
+        [Fact]
+        public void should_return_legal_moves_when_en_passant_available()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

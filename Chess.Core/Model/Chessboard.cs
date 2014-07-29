@@ -30,6 +30,11 @@ namespace Chess.Core.Model
             get { return this[position[0], int.Parse(position[1].ToString(CultureInfo.InvariantCulture))]; }
         }
 
+        public Piece this[Position position]
+        {
+            get { return this[position.Column, position.Row]; }
+        }
+
         public void MovePiece(Position source, Position target)
         {
             if (!IsMoveLegal(source, target)) throw new IllegalMoveException();
