@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Chess.Core.Services
 {
-    public static class PieceLegalMoves
+    public static class PieceLegalMovesService
     {
         public static HashSet<Position> GetLegalMoves(Position position, Chessboard chessboard)
         {

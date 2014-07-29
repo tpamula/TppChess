@@ -22,7 +22,7 @@ namespace Chess.Tests.Services
                 "a4".ToPosition()
             };
 
-            Assert.True(PieceLegalMoves.GetLegalMoves("a2".ToPosition(), chessboard)
+            Assert.True(PieceLegalMovesService.GetLegalMoves("a2".ToPosition(), chessboard)
                                        .SetEquals(legalMoves));
         }
     }
