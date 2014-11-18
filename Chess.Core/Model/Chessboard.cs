@@ -1,4 +1,5 @@
 ﻿using Chess.Core.Enums;
+using Chess.Core.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -59,31 +60,31 @@ namespace Chess.Core.Model
 
         private void CreateInitialSetup()
         {
-            var initialSetup = new List<Row>();
-
-            initialSetup.Add(new Row(new List<Piece>()
+            var initialSetup = new List<Row>
             {
-                new Piece(PieceColor.White, PieceType.Rook),
-                new Piece(PieceColor.White, PieceType.Knight),
-                new Piece(PieceColor.White, PieceType.Bishop),
-                new Piece(PieceColor.White, PieceType.Queen),
-                new Piece(PieceColor.White, PieceType.King),
-                new Piece(PieceColor.White, PieceType.Bishop),
-                new Piece(PieceColor.White, PieceType.Knight),
-                new Piece(PieceColor.White, PieceType.Rook)
-            }));
-
-            initialSetup.Add(new Row(new List<Piece>()
-            {
-                new Piece(PieceColor.White, PieceType.Pawn),
-                new Piece(PieceColor.White, PieceType.Pawn),
-                new Piece(PieceColor.White, PieceType.Pawn),
-                new Piece(PieceColor.White, PieceType.Pawn),
-                new Piece(PieceColor.White, PieceType.Pawn),
-                new Piece(PieceColor.White, PieceType.Pawn),
-                new Piece(PieceColor.White, PieceType.Pawn),
-                new Piece(PieceColor.White, PieceType.Pawn),
-            }));
+                new Row(new List<Piece>()
+                {
+                    new Piece(PieceColor.White, PieceType.Rook),
+                    new Piece(PieceColor.White, PieceType.Knight),
+                    new Piece(PieceColor.White, PieceType.Bishop),
+                    new Piece(PieceColor.White, PieceType.Queen),
+                    new Piece(PieceColor.White, PieceType.King),
+                    new Piece(PieceColor.White, PieceType.Bishop),
+                    new Piece(PieceColor.White, PieceType.Knight),
+                    new Piece(PieceColor.White, PieceType.Rook)
+                }),
+                new Row(new List<Piece>()
+                {
+                    new Piece(PieceColor.White, PieceType.Pawn),
+                    new Piece(PieceColor.White, PieceType.Pawn),
+                    new Piece(PieceColor.White, PieceType.Pawn),
+                    new Piece(PieceColor.White, PieceType.Pawn),
+                    new Piece(PieceColor.White, PieceType.Pawn),
+                    new Piece(PieceColor.White, PieceType.Pawn),
+                    new Piece(PieceColor.White, PieceType.Pawn),
+                    new Piece(PieceColor.White, PieceType.Pawn),
+                })
+            };
 
             for (int i = 0; i < 4; i++)
             {

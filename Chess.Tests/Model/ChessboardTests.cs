@@ -2,13 +2,11 @@
 using ApprovalTests.Reporters;
 using Chess.Core.Enums;
 using Chess.Core.Model;
-using System;
-using System.Collections.Generic;
 using Xunit;
 
-namespace Chess.Tests
+namespace Chess.Tests.Model
 {
-    [UseReporter(typeof(ApprovalTests.Reporters.DiffReporter))]
+    [UseReporter(typeof(DiffReporter))]
     public class ChessboardTests
     {
         [Fact]

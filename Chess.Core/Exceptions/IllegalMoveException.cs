@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace Chess.Core.Model
+namespace Chess.Core.Exceptions
 {
     internal class IllegalMoveException : Exception
     {
